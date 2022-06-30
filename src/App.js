@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './components/Header'
+import './Styles/General.css'
+import Card from './components/Card'
+import Search from './components/Search'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+
+    const [searchInput, setSearchInput] = React.useState('Snowinee' || '');
+    const [profile, setProfile] = React.useState({});
+
+    const search = () => {
+        fetch(`https://api.github.com/users/${searchInput}`)
+            .then(res => res.json())
+            .then(data => setProfile(data))
+    }
+
+    const updateSearch = (value) => {
+        setSearchInput(value)
+    }
+
+    React.useEffect(() => {
+        search()
+    }, [])
+
+    return (
+        <>
+            <Header />        
+            <main>
+                <Search 
+                    updateChange={updateSearch}
+                    buttonClick={search}
+                />
+                <Card 
+                    {...profile}
+                />
+            </main>
+        </>
+    )
 }
-
-export default App;

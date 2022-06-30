@@ -1,0 +1,16 @@
+:root {
+    --mainBg: #2B2D42;
+    --secondaryColor: #8D99AE;
+    --textColor: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--secondaryColor);
+    font-family: 'Poppins', sans-serif;
+}
