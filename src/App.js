@@ -17,6 +17,7 @@ export default function App() {
 
     const updateSearch = (value) => {
         setSearchInput(value)
+        search()
     }
 
     React.useEffect(() => {
@@ -29,7 +30,6 @@ export default function App() {
             <main>
                 <Search 
                     updateChange={updateSearch}
-                    buttonClick={search}
                 />
                 <Card 
                     {...profile}

@@ -22,26 +22,10 @@
     font-weight: 200;
     outline: none;
     border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .search input::placeholder {
     font-size: 1.1rem;
     color: gray;
-}
-
-.searchBtn {
-    display: flex;
-    height: 48px;
-    align-self: flex-end;
-    width: 60px;
-    background-color: var(--secondaryColor);
-    justify-content: center;
-    border-top-right-radius: 15px;
-}
-
-.searchBtn .btn {
-    font-size: 2rem;
-    color: white;
-    align-self: center;
 }
