@@ -21,8 +21,7 @@
     font-size: 1.1rem;
     font-weight: 200;
     outline: none;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 10px;
 }
 
 .search input::placeholder {

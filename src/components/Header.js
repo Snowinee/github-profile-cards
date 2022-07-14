@@ -6,7 +6,6 @@ export default function Header() {
         <header>
             <nav>
                 <h1>Github Profile Cards</h1>
-                <p>Made with ReactJS</p>
             </nav>
         </header>
     )
